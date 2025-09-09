@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .contain {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav-item {
+      margin-left: 230px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="contain">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item" id="User_place">
+            <a class="nav-link" href="login.html">Ingresar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <form id="profile-form">
+      <div class="container p-5">
+        <div class="row">
+          <h3>Perfil</h3>
+        
+        <div id="imgTest"><img src="img/img_perfil.png" style="float:right; width:12% ; position: relative;" id="image"></div>
+        </div>
+        <hr>
+        <div class="text-center">
+          <div class="row p-3">
+          <div class="col-md-2 p-2">
+            <label for="primerNombre" style='width:180px;'>Primer nombre*</label>
+            <input type="text" id="primerNombre" class="form-control" onkeyup="validations()">
+            <div class="invalid-feedback">
+              Debe ingresar su primer nombre
+            </div>
+          </div>
+          <div class="col-md-2 p-2 offset-1">
+            <label for="segundoNombre" style='width:180px;'>Segundo nombre</label>
+            <input type="text" id="segundoNombre" class="form-control">
+          </div>
+        </div>
+        <div class="row p-3">
+          <div class="col-md-2 p-2">
+            <label for="primerApellido" style='width:180px;'>Primer apellido*</label>
+            <input type="text" id="primerApellido" onkeyup="validations()" class="form-control">
+            <div class="invalid-feedback">
+              Debe ingresar su primer apellido
+            </div>
+          </div>
+          <div class="col-md-2 p-2 offset-1">
+            <label for="segundoApellido" style='width:180px;'>Segundo apellido</label>
+            <input type="text" id="segundoApellido" class="form-control">
+          </div>
+        </div>
+        <div class="row p-3">
+          <div class="col-md-2 p-2">
+            <label for="email">Email &nbsp; &nbsp;</label>
+            <input type="email" id="email" disabled class="form-control">
+          </div>
+          <div class="col-md-2 p-2 offset-1">
+            <label for="telefono" style='width:180px;'>Teléfono de contacto*</label>
+            <input type="text" id="telefono" onkeyup="validations()" class="form-control">
+            <div class="invalid-feedback">
+              Debe ingresar un teléfono de contacto
+            </div>
+          </div>
+        </div>
+        <div class="row p-3">
+          <div class="col-md-5 p-2">
+            <label for="inputFileToLoad">Imagen de perfil &nbsp; &nbsp;</label>
+            <input type="file" id="inputFileToLoad" class="form-control" width="200px" onchange="encodeImageFileAsURL();">
+          </div>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-primary" id="saveChanges">Guardar cambios</button></div>
+        
+      </div>
+    </form>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/my-profile.js"></script>
+</body>
+
+</html>

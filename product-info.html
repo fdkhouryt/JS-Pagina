@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .blink {
+      animation: blink 1s steps(1, end) infinite;
+    }
+   
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+       opacity: 0.5;
+      }
+      100% {
+      opacity: 1;
+      }
+    }
+
+
+    #relatedImg {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    #relatedP {
+      border-radius: 5px;
+      border: 2px dashed darkgray;
+      padding: 20px 20px 50px 20px;
+      max-width: 1600px;
+      height: 325px;
+      margin: 10px 130px 10px 130px;
+    }
+
+    .relImg:hover {
+      border: 2px dashed darkgray;
+    }
+
+    .relName {
+      text-align: center;
+    }
+    
+    .contain{
+      display: flex;
+      justify-content: space-between;
+    }
+    .nav-item {
+      margin-left: 230px ;
+    }
+
+    /* carrusel de cartas */
+
+    .icon-cards {
+      position: relative;
+      width: 60vw;
+      height: 40vw;
+      max-width: 380px;
+      max-height: 250px;
+      margin: 0;
+      color: white;
+      perspective: 1000px;
+      transform-origin: center;
+    }
+    .icon-cards__content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transform: translateZ(-30vw) rotateY(0);
+      -webkit-animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+              animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    }
+    .icon-cards__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 60vw;
+      height: 40vw;
+      max-width: 490px;
+      max-height: 310px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      transform-origin: center;
+    }
+    .icon-cards__item:nth-child(1) {
+      background: #fdda4f67;
+      transform: rotateY(0) translateZ(35vw);
+    }
+    .icon-cards__item:nth-child(2) {
+      background: #f8784969;
+      transform: rotateY(90deg) translateZ(35vw);
+    }
+    .icon-cards__item:nth-child(3) {
+      background: #d5161660;
+      transform: rotateY(180deg) translateZ(35vw);
+    }
+    .icon-cards__item:nth-child(4) {
+      background: #fbab4967;
+      transform: rotateY(270deg) translateZ(35vw);
+    }
+
+    @-webkit-keyframes carousel {
+      0%, 17.5% {
+        transform: translateZ(-35vw) rotateY(0);
+      }
+      20.5%, 38% {
+        transform: translateZ(-35vw) rotateY(-90deg);
+      }
+      43%, 60% {
+        transform: translateZ(-35vw) rotateY(-180deg);
+      }
+      65%, 81.5% {
+        transform: translateZ(-35vw) rotateY(-270deg);
+      }
+      85.5%, 100% {
+        transform: translateZ(-35vw) rotateY(-360deg);
+      }
+    }
+
+    @keyframes carousel {
+      0%, 17.5% {
+        transform: translateZ(-50vw) rotateY(0);
+      }
+      20.5%, 38% {
+        transform: translateZ(-50vw) rotateY(-90deg);
+      }
+      43%, 60% {
+        transform: translateZ(-50vw) rotateY(-180deg);
+      }
+      65%, 81.5% {
+        transform: translateZ(-50vw) rotateY(-270deg);
+      }
+      85.5%, 100% {
+        transform: translateZ(-50vw) rotateY(-360deg);
+      }
+    }
+
+    .paused{
+      -webkit-animation-play-state:paused;
+      -moz-animation-play-state:paused;
+      -o-animation-play-state:paused; 
+      animation-play-state:paused;
+    }
+
+    #images {
+      padding-bottom: 80px;
+      margin-top: 30px;
+      margin-left: 150px;
+      flex-direction: column;
+      display: block;
+    }
+
+  
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="contain">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item" id="User_place">
+            <a class="nav-link" href="login.html">Ingresar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container" id="contenedor"> </div>
+    <div class="container" id="comments" style="padding: 25px; margin-left: 110px;">
+      <strong>Comentarios</strong> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+        <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"/>
+      </svg><br><br>
+      
+    </div>
+    <div id="add-comment" style="padding: 25px; margin-left: 110px;">
+      <strong>Comenta tu opinión:</strong> 
+      <br><br>
+      <form action="">
+        <textarea name="" class="form-control" id="newComment" rows="3" cols="7" type="text" placeholder=" Escribe aquí" class="form-control" style="border-radius:15px; max-width: 1250px;"></textarea>
+        <br>
+        <p>Puntuación: <select id="comment-score">
+            <option>★</option>
+            <option>★★</option>
+            <option>★★★</option>
+            <option>★★★★</option>
+            <option selected>★★★★★</option>
+          </select> 
+        </p> 
+        <br>
+         <button type="button" class="btn btn-outline-secondary" id="comment">Comentar</button>
+       </form>
+    </div >
+    <div id="relatedP">
+      <strong>Productos recomendados</strong> <br>
+      <div id="relatedImg"></div>
+    </div>
+
+
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/product-info.js"></script>
+</body>
+
+</html>
